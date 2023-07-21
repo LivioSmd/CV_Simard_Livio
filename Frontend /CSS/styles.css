@@ -1,36 +1,67 @@
 body {
-    background-color: black;
-    width: 1279px;
-    margin: auto;
+    background-color: #100919;
+    width: 1440px;
+    margin: 0;
 }
 
 .LogoCv {
     width: 7%;
 }
 
-.whiteText {
-    color: white;
-    font-size: 20px;
-}
-
 .head-infos {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 2% 0% 2% 0%;
+    margin: 2% 5% 0% 5%;
+    background-image: url(../Images/fond-cercle.svg);
 }
 
 .head-category {
     display: flex;
-    width: 32%;
+    width: 40%;
     justify-content: space-between;
 }
 
-/* teste ligne */
+h1 {
+    color: white;
+    font-weight: 700;
+    font-size: 100Px;
+    font-family: "Raleway", sans-serif;
+    background: linear-gradient(to right, #ffff, #b87bf5 99%, #8311f4);
+    color: transparent; /* Rend le texte transparent pour montrer le dégradé en arrière-plan */
+    -webkit-background-clip: text; /* Pour les navigateurs WebKit (Chrome, Safari) */
+    background-clip: text;
+
+}
+
+.sectionTitle {
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../Images/fond-cercle.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+.t1span {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right, #ffff, #8C21F8 30%, #8C21F8);
+    color: transparent; /* Rend le texte transparent pour montrer le dégradé en arrière-plan */
+    -webkit-background-clip: text; /* Pour les navigateurs WebKit (Chrome, Safari) */
+    background-clip: text;
+}
+
+
+/* bouton nav start*/
 
 .light-button button.bt {
     position: relative;
-    height: 200px;
+    height: 35px;
     display: flex;
     align-items: flex-end;
     outline: none;
@@ -46,14 +77,14 @@ body {
     justify-content: center;
     height: 30px;
     width: 100px;
-    background-color: #0a0a0a;
+    background-color: #100919;
     border-radius: 5px;
     color: white;
     font-weight: 700;
     transition: 300ms;
-    outline: #0f0f0f 2px solid;
+    outline: #100919 2px solid;
     outline-offset: 20;
-    font-size: 20px;
+    font-size: 12px;
 }
   
 .light-button button.bt .button-holder svg {
@@ -64,7 +95,7 @@ body {
   
 .light-button button.bt .light-holder {
     position: absolute;
-    height: 100px;
+    height: 70px;
     width: 100px;
     display: flex;
     flex-direction: column;
@@ -85,7 +116,7 @@ body {
     position: absolute;
     top: 0;
     width: 200px;
-    height: 100px;
+    height: 70px;
     clip-path: polygon(50% 0%, 25% 100%, 75% 100%);
     background: transparent;
 }
@@ -98,10 +129,144 @@ body {
     color: #AB88FB;
     outline: #AB88FB 2px solid;
     outline-offset: 2px;
-    font-size: 20px;
+    font-size: 12px;
 }
   
 .light-button button.bt:hover .light-holder .light {
     background: rgb(255, 255, 255);
     background: linear-gradient(180deg, #AB88FB 0%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0) 100%);
 }
+
+/* bouton nav end*/
+
+/* little loader h1 start */
+
+.animationLoader {
+    width: 45px;
+    height: 40px;
+    background: linear-gradient(#0000 calc(1*100%/6),#8C1DFC 0 calc(3*100%/6),#0000 0),
+              linear-gradient(#0000 calc(2*100%/6),#8C1DFC 0 calc(4*100%/6),#0000 0),
+              linear-gradient(#0000 calc(3*100%/6),#8C1DFC 0 calc(5*100%/6),#0000 0);
+    background-size: 1px 400%;
+    background-repeat: no-repeat;
+    animation: matrix 1s infinite linear;
+    position: relative;
+    bottom: 150px;
+}
+  
+@keyframes matrix {
+    0% {
+      background-position: 0% 100%, 50% 100%, 100% 100%
+    }
+  
+    100% {
+      background-position: 0% 0%, 50% 0%, 100% 0%
+    }
+}
+      
+
+/* little loader h1 end */
+
+/* little animationLine start */
+
+.animationLine, .animationLine2, .lineNoAnimate{
+    display: block;
+    --height-of-loader: 100px;
+    --loader-color: #8C1DFC;
+    width: 1px;
+    height: 800px;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+  
+.animationLine::before, .animationLine2::before {
+    content: "";
+    position: absolute;
+    background: var(--loader-color);
+    top: 0; /* Commence au début de l'élément */
+    left: 0;
+    width: 100%;
+    height: 0; /* Débute avec une hauteur de 0 pour que le point du haut soit caché */
+    border-radius: 30px;
+    animation: moving 5s linear infinite, neon 1s ease-in-out infinite alternate;
+}
+
+.animationLine2::before{
+    animation-delay: 2s
+}
+
+
+@keyframes moving {
+    0% {
+      top: 0; /* Reste au début de l'élément */
+      height: 0; /* Hauteur de 0 pour cacher le point */
+    }
+  
+    50% {
+      top: 800px; /* Descend jusqu'en bas (800px) */
+      height: var(--height-of-loader); /* Hauteur de l'élément pour montrer le point */
+      opacity: 1; /* Montre la lumière */
+    }
+  
+    100% {
+      top: 800px; /* Reste en bas de l'élément */
+      height: 0; /* Le point disparait en bas */
+      opacity: 0.5; /* Garde la lumière allumée */
+    }
+}
+  
+@keyframes neon {
+    to {
+      box-shadow: 0 0 30px #8C1DFC;
+    }
+}
+  
+  
+.line1 {
+    position: absolute;
+    left: 72px;
+}
+
+.line2 {
+    position: absolute;
+    left: 232px;
+}
+
+.line3 {
+    position: absolute;
+    left: 392px;
+}
+
+.line4 {
+    position: absolute;
+    left: 552px;
+}
+
+.line5 {
+    position: absolute;
+    left: 712px;
+}
+
+.line6 {
+    position: absolute;
+    left: 872px;
+}
+
+.line7 {
+    position: absolute;
+    left: 1032px;
+}
+
+.line8 {
+    position: absolute;
+    left: 1192px;
+}
+
+.line9 {
+    position: absolute;
+    left: 1352px;
+}
+
+/* little animationLine end */
