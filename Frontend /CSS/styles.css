@@ -8,11 +8,16 @@ body {
     width: 7%;
 }
 
+header {
+    width: 91%;
+    height: 112px;
+}
+
 .head-infos {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0% 5% 0% 5%;
+    margin: 0% 5% 5% 5%;
     position: fixed;
     z-index: 1;
     width: 91%;
@@ -35,6 +40,22 @@ h1 {
     -webkit-background-clip: text; /* Pour les navigateurs WebKit (Chrome, Safari) */
     background-clip: text;
 
+}
+
+h2 {
+    color: #d6d0e0;
+    font-weight: 400;
+    font-family: "Raleway", sans-serif;
+    font-size: 33px;
+    text-align: justify;
+}
+
+.textDescOpacity{
+    opacity: 0.9;
+}
+
+.textDesc {
+    width: 50%;
 }
 
 .sectionTitle {
@@ -197,60 +218,98 @@ h1 {
       box-shadow: 0 0 30px #8C1DFC;
     }
 }
-  
+
+.lineHeight {
+    top: 250px;
+}
   
 .line1 {
     position: absolute;
-    left: 72px;
-    top: 150px;
+    left: 6%;
 }
 
 .line2 {
     position: absolute;
-    left: 232px;
-    top: 150px;
+    left: 17%;
 }
 
 .line3 {
     position: absolute;
-    left: 392px;
-    top: 150px;
+    left: 28%;
 }
 
 .line4 {
     position: absolute;
-    left: 552px;
-    top: 150px;
+    left: 39%;
 }
 
 .line5 {
     position: absolute;
-    left: 712px;
-    top: 150px;
+    left: 50%;
 }
 
 .line6 {
     position: absolute;
-    left: 872px;
-    top: 150px;
+    left: 61%;
 }
 
 .line7 {
     position: absolute;
-    left: 1032px;
-    top: 150px;
+    left: 72%;
 }
 
 .line8 {
     position: absolute;
-    left: 1192px;
-    top: 150px;
+    left: 83%;
 }
 
 .line9 {
     position: absolute;
-    left: 1352px;
-    top: 150px;
+    left: 94%;
 }
 
 /* little animationLine end */
+
+/* little corner background start */
+
+.corner-up-right {
+    height: 12px;
+    width: 15px;
+    border-top: 1px solid #8311f4;
+    border-right: 1px solid #8311f4;
+}
+
+.corner-up-left {
+    height: 12px;
+    width: 15px;
+    border-top: 1px solid #8311f4;
+    border-left: 1px solid #8311f4;
+}
+
+.corner-bottom-right {
+    height: 12px;
+    width: 15px;
+    border-bottom: 1px solid #8311f4;
+    border-right: 1px solid #8311f4;
+}
+
+.corner-bottom-left {
+    height: 12px;
+    width: 15px;
+    border-bottom: 1px solid #8311f4;
+    border-left: 1px solid #8311f4;
+}
+
+.corner-top {
+    width: 76%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.corner-bottom {
+    width: 76%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* little corner background end */
