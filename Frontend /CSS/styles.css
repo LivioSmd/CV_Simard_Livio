@@ -16,17 +16,18 @@ header {
 .head-infos {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin: 0% 5% 5% 5%;
+    align-items: self-end;
+    margin: 0% 5% 0% 5%;
     position: fixed;
     z-index: 1;
     width: 91%;
-    height: 112px;
+    height: 73px;
+    background-color: #100919;
 }
 
 .head-category {
     display: flex;
-    width: 40%;
+    width: 34%;
     justify-content: space-between;
 }
 
@@ -59,10 +60,9 @@ h2 {
 }
 
 .sectionTitle {
-    height: 1000px;
+    height: 950px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     background-image: url(../Images/fond-cercle.svg);
     background-size: 100%;
@@ -103,7 +103,8 @@ h2 {
     width: 100px;
     background-color: #100919;
     border-radius: 5px;
-    color: white;
+    color: #d6d0e0;
+    opacity: 0.9;
     font-weight: 700;
     transition: 300ms;
     outline: #100919 2px solid;
@@ -220,7 +221,7 @@ h2 {
 }
 
 .lineHeight {
-    top: 250px;
+    top: 200px;
 }
   
 .line1 {
@@ -318,7 +319,8 @@ h2 {
     Display: flex;
     flex-direction: column;
     align-items: center;
-    height: 800px;
+    height: 900px;
+    padding-top: 25px;
 }
 
 /* compétences bouton start */
@@ -327,8 +329,8 @@ h2 {
 }
 
 .competencesDiv{
-    height: 200px;
-    margin-top: 50px;
+    margin-top: 40px;
+    padding-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -463,9 +465,9 @@ h2 {
 /* compétences bouton end */
 
 .all-Cards{
-    margin-top: 17%;
+    margin-top: 11%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 40px;
 }
 
