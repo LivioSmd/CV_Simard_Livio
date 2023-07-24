@@ -1,50 +1,78 @@
+:root {
+    /*
+    --black-color: black;
+    --white-color: #ffff;
+    --base-color: #8311f4;
+    --twobase-color: #100919;
+    --threebase-color: #8C21F8;
+    --fourbase-color: #d6d0e0;
+    --fivebase-color: #AB88FB;
+    --sixbase-color: #8C1DFC;
+    --cardbase-color: #2f0d51;
+    --form-color: #171717;
+    */
+    --black-color: #000B20;
+    --white-color: #ffff;
+    --base-color: #7F664A;
+    --twobase-color: #7C9CA2;
+    --threebase-color: #D3BDA1;
+    --fourbase-color: #F7F7F1;
+    --fivebase-color: #F3E2C9;
+    --sixbase-color: #121828;
+    --cardbase-color: #B0D2D6;
+    --cardbaseplus-color: #70979b;
+    --form-color: #7C9CA2;
+    
+}
+
 body {
-    background-color: #100919;
+    background-color: var(--black-color);
     width: 1440px;
     margin: 0;
 }
 
 .LogoCv {
-    width: 7%;
+    width: 87px;
+    padding-left: 1%;
 }
 
 header {
     width: 91%;
-    height: 112px;
+    height: 76px;
 }
 
 .head-infos {
     display: flex;
     justify-content: space-between;
     align-items: self-end;
-    margin: 0% 5% 0% 5%;
     position: fixed;
     z-index: 1;
-    width: 91%;
+    width: 100%;
     height: 73px;
-    background-color: #100919;
+    background-color: var(--black-color);
+    padding-bottom: 3px;
 }
 
 .head-category {
     display: flex;
     width: 34%;
     justify-content: space-between;
+    padding-right: 1%;
 }
 
 h1 {
-    color: white;
+    color: var(--white-color);
     font-weight: 700;
     font-size: 100Px;
     font-family: "Raleway", sans-serif;
-    background: linear-gradient(to right, #ffff, #b87bf5 99%, #8311f4);
-    color: transparent; /* Rend le texte transparent pour montrer le dégradé en arrière-plan */
-    -webkit-background-clip: text; /* Pour les navigateurs WebKit (Chrome, Safari) */
-    background-clip: text;
-
+    backdrop-filter: blur(30px);
+    text-align: center;
+    border-radius: 15px;
 }
 
+
 h2 {
-    color: #d6d0e0;
+    color: var(--sixbase-color);
     font-weight: 400;
     font-family: "Raleway", sans-serif;
     font-size: 33px;
@@ -52,13 +80,13 @@ h2 {
 }
 
 h3 {
-    color: #7442a7;
     font-weight: 400;
     font-family: "Raleway", sans-serif;
     font-size: 30px;
     text-align: -webkit-center;
-    color: #e9d3ff;
-    opacity: 0.7;
+    color: white;
+    margin-left: 49%;
+    opacity: 0.8;
 }
 
 .textDescOpacity{
@@ -71,25 +99,13 @@ h3 {
 
 .sectionTitle {
     height: 950px;
+    padding-top: 35px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(../Images/fond-cercle.svg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
+    background-image: url(../Images/web_design.jpg);
+    background-size: cover;
 }
-
-
-.t1span {
-    display: flex;
-    justify-content: center;
-    background: linear-gradient(to right, #ffff, #8C21F8 30%, #8C21F8);
-    color: transparent; /* Rend le texte transparent pour montrer le dégradé en arrière-plan */
-    -webkit-background-clip: text; /* Pour les navigateurs WebKit (Chrome, Safari) */
-    background-clip: text;
-}
-
 
 /* bouton nav start*/
 
@@ -111,13 +127,13 @@ h3 {
     justify-content: center;
     height: 30px;
     width: 100px;
-    background-color: #100919;
+    background-color: #023045;
     border-radius: 5px;
-    color: #d6d0e0;
+    color: var(--white-color);
     opacity: 0.9;
     font-weight: 700;
     transition: 300ms;
-    outline: #100919 2px solid;
+    outline: #023045 2px solid;
     outline-offset: 20;
     font-size: 12px;
 }
@@ -142,7 +158,7 @@ h3 {
     top: 0;
     width: 10px;
     height: 10px;
-    background-color: #1c0e2f;
+    background-color: var(--white-color);
     border-radius: 10px;
     z-index: 2;
 }
@@ -150,165 +166,144 @@ h3 {
 .light-button button.bt .light-holder .light {
     position: absolute;
     top: 0;
-    width: 200px;
-    height: 70px;
+    width: 130px;
+    height: 40px;
     clip-path: polygon(50% 0%, 25% 100%, 75% 100%);
     background: transparent;
 }
   
 .light-button button.bt:hover .button-holder svg {
-    fill: #AB88FB;
+    fill: var(--fivebase-color);
 }
   
 .light-button button.bt:hover .button-holder {
-    color: #AB88FB;
-    outline: #AB88FB 2px solid;
+    color: #7F664A;
+    outline: #7F664A 2px solid;
     outline-offset: 2px;
     font-size: 12px;
 }
   
 .light-button button.bt:hover .light-holder .light {
-    background: rgb(255, 255, 255);
-    background: linear-gradient(180deg, #AB88FB 0%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0) 100%);
+    background: var(--white-color);
+    background: linear-gradient(180deg, #7F664A 0%, #7F664A 50%,#a88966 80%,#cbaa83 93%,var(--white-color) 100%);
 }
 
-/* bouton nav end*/
+/* bouton nav end */
 
-/* little animationLine start */
+.title1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-.animationLine, .animationLine2, .lineNoAnimate{
-    display: block;
-    --height-of-loader: 100px;
-    --loader-color: #8C1DFC;
-    width: 1px;
-    height: 800px;
-    border-radius: 30px;
-    background-color: rgba(0, 0, 0, 0.2);
+/* card desc start */
+
+.small-desc {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    text-align: justify;
+  }
+  
+  .go-corner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 2em;
+    height: 2em;
     overflow: hidden;
-    background: linear-gradient( #100919, #241145 20%, #410f76);
-}
+    top: 0;
+    right: 0;
+    background: var(--cardbaseplus-color);
+    border-radius: 0 4px 0 32px;
+  }
   
-.animationLine::before, .animationLine2::before {
-    content: "";
-    position: absolute;
-    background: var(--loader-color);
-    top: 0; /* Commence au début de l'élément */
-    left: 0;
-    width: 100%;
-    height: 0; /* Débute avec une hauteur de 0 pour que le point du haut soit caché */
-    border-radius: 30px;
-    animation: moving 5s linear infinite, neon 1s ease-in-out infinite alternate;
-}
-
-.animationLine2::before{
-    animation-delay: 2s
-}
-
-
-@keyframes moving {
-    0% {
-      top: 0; /* Reste au début de l'élément */
-      height: 0; /* Hauteur de 0 pour cacher le point */
-    }
+  .go-arrow {
+    margin-top: -4px;
+    margin-right: -4px;
+    color: white;
+    font-family: courier, sans;
+  }
   
-    50% {
-      top: 800px; /* Descend jusqu'en bas (800px) */
-      height: var(--height-of-loader); /* Hauteur de l'élément pour montrer le point */
-      opacity: 1; /* Montre la lumière */
-    }
+  .card-desc {
+    display: block;
+    position: relative;
+    width: 69%;
+    height: 228px;
+    border-radius: 10px;
+    padding: 1.2em 1.2em;
+    margin: 6% 1% 1% 1%;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+    background: #121828;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 8px 14px 0 #121828;
+  }
   
-    100% {
-      top: 800px; /* Reste en bas de l'élément */
-      height: 0; /* Le point disparait en bas */
-      opacity: 0.5; /* Garde la lumière allumée */
-    }
-}
+  .card-desc:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -70px;
+    right: -70px;
+    background: var(--cardbaseplus-color);
+    height: 100px;
+    width: 100px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.35s ease-out;
+  }
   
-@keyframes neon {
-    to {
-      box-shadow: 0 0 30px #8C1DFC;
-    }
-}
-
-.lineHeight {
-    top: 200px;
-}
+  .card-desc:hover:before {
+    transform: scale(28);
+  }
   
-.line1 {
-    position: absolute;
-    left: 6%;
-}
+  .card-desc:hover .small-desc {
+    transition: all 0.5s ease-out;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .card-desc:hover .card-desc-title {
+    transition: all 0.5s ease-out;
+    color: #ffffff;
+  }
+  
 
-.line2 {
-    position: absolute;
-    left: 17%;
-}
+/* card desc end */
 
-.line3 {
-    position: absolute;
-    left: 28%;
-}
-
-.line4 {
-    position: absolute;
-    left: 39%;
-}
-
-.line5 {
-    position: absolute;
-    left: 50%;
-}
-
-.line6 {
-    position: absolute;
-    left: 61%;
-}
-
-.line7 {
-    position: absolute;
-    left: 72%;
-}
-
-.line8 {
-    position: absolute;
-    left: 83%;
-}
-
-.line9 {
-    position: absolute;
-    left: 94%;
-}
-
-/* little animationLine end */
 
 /* little corner background start */
 
 .corner-up-right {
     height: 12px;
     width: 15px;
-    border-top: 1px solid #8311f4;
-    border-right: 1px solid #8311f4;
+    border-top: 1px solid var(--base-color);
+    border-right: 1px solid var(--base-color);
 }
 
 .corner-up-left {
     height: 12px;
     width: 15px;
-    border-top: 1px solid #8311f4;
-    border-left: 1px solid #8311f4;
+    border-top: 1px solid var(--base-color);
+    border-left: 1px solid var(--base-color);
 }
 
 .corner-bottom-right {
     height: 12px;
     width: 15px;
-    border-bottom: 1px solid #8311f4;
-    border-right: 1px solid #8311f4;
+    border-bottom: 1px solid var(--base-color);
+    border-right: 1px solid var(--base-color);
 }
 
 .corner-bottom-left {
     height: 12px;
     width: 15px;
-    border-bottom: 1px solid #8311f4;
-    border-left: 1px solid #8311f4;
+    border-bottom: 1px solid var(--base-color);
+    border-left: 1px solid var(--base-color);
 }
 
 .corner-top {
@@ -334,9 +329,6 @@ h3 {
 }
 
 /* compétences bouton start */
-:root {
-    --glow-color: #8311f4;
-}
 
 .competencesDiv{
     margin-top: 40px;
@@ -347,7 +339,7 @@ h3 {
 }
 
 .title-btn {
-    color: var(--glow-color);
+    color: var(--white-color);
     background: none;
     perspective: 2em;
     font-family: "Raleway", sans-serif;
@@ -361,10 +353,10 @@ h3 {
     float: left;
     margin-right: -0.8em;
     -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
-        0 0 0.45em var(--glow-color);
+        0 0 0.45em var(--base-color);
     -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
-        0 0 0.45em var(--glow-color);
-    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
+        0 0 0.45em var(--base-color);
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--base-color);
     animation: text-flicker 8s linear infinite;
 }
 
@@ -383,7 +375,7 @@ h3 {
     opacity: 0.7;
     filter: blur(1em);
     transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
-    background: var(--glow-color);
+    background: white;
     pointer-events: none;
 }
 
@@ -496,6 +488,7 @@ h3 {
     font-weight: 900;
     text-align: center;
     margin: 0;
+    
 }
   
 .flip-card-inner {
@@ -512,7 +505,7 @@ h3 {
 }
   
   .flip-card-front, .flip-card-back {
-    box-shadow: 0 8px 14px 0 #8311f4;
+    box-shadow: 0 8px 14px 0 white;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -521,29 +514,30 @@ h3 {
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    border: 1px solid #201233;
+    border: 1px solid var(--cardbaseplus-color);
     border-radius: 1rem;
 }
   
 .flip-card-front {
-    background: linear-gradient(120deg, #2f0d51 60%, #2f0d51 88%,#8311f4 40%, #201233 48%);
-    color: #d6d0e0;
+    background: var(--cardbaseplus-color);
+    color: var(--fourbase-color);
     font-family: "Raleway", sans-serif;
     opacity: 0.9;
 }
   
 .flip-card-back {
-    background: linear-gradient(120deg, #2f0d51 30%, #2f0d51 88%,#8311f4 40%, #201233 78%);
-    color: #d6d0e0;
+    color: var(--fourbase-color);
     font-family: "Raleway", sans-serif;
     transform: rotateY(180deg);
     opacity: 0.9;
+    background-color: var(--sixbase-color);
+    border: 1px solid var(--white-color);
 }
 
 /* Card HTML / CSS end */
 
 .sectionPortfolio {
-    height: 900px;
+    height: 1050px;
 }
 
 .portfolioDiv{
@@ -603,19 +597,19 @@ h3 {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    box-shadow: 0 0 10px #AB88FB;
+    box-shadow: 0 0 10px var(--fivebase-color);
     opacity: 0.9;
 }
   
 .heading {
     font-size: 24px;
     font-weight: 700;
-    color: #100919;
+    color: var(--twobase-color);
 }
   
 .para {
     text-align: center;
-    color: #100919;
+    color: var(--twobase-color);
     opacity: 0.7;
     line-height: 1.4;
 }
@@ -645,7 +639,7 @@ h3 {
     padding: 2% 2%;
     font-size: 16px;
     transform: translate(-50%, -50%);
-    background-color: #ffffff;
+    background-color: var(--white-color);
     border-radius: 50px;
     display: flex;
     align-items: center;
@@ -681,7 +675,6 @@ h3 {
     transform: translate(-50%, -50%) scale(0);
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(-45deg, #AB88FB 0%, rgba(255, 255, 255, 0) 100% );
     transition: transform 0.5s ease;
 }
   
@@ -720,6 +713,9 @@ h3 {
     align-items: center;
     padding-top: 6%;
     height: 900px;
+    background-image: url(../Images/comp.png);
+    background-size: cover;
+    background-position: center center;
 }
 
 .form-container{
@@ -738,22 +734,18 @@ h3 {
     padding-left: 2em;
     padding-right: 2em;
     padding-bottom: 0.4em;
-    background-color: #171717;
+    background-color: #122835;
     border-radius: 25px;
     transition: .4s ease-in-out;
-    width: 60%;
-    height: 500px;
-}
-  
-.form:hover {
-    transform: scale(1.05);
-    border: 1px solid black;
+    width: 57%;
+    height: 480px;
+    border: #050E1B 20px solid;
 }
   
 #heading {
     text-align: center;
     margin: 2em;
-    color: #d6d0e0;
+    color: var(--fourbase-color);
     font-size: 1.2em;
     font-family: "Raleway", sans-serif;
 }
@@ -767,9 +759,9 @@ h3 {
     padding: 0.6em;
     border: none;
     outline: none;
-    color: #d6d0e0;
-    background-color: #171717;
-    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+    color: var(--fourbase-color);
+    background-color: var(--form-color);
+    box-shadow: inset 2px 5px 10px var(--black-color);
 }
   
 .input-field {
@@ -796,25 +788,8 @@ h3 {
     border: none;
     outline: none;
     transition: .4s ease-in-out;
-    background-color: #252525;
-    color: #d6d0e0;
-}
-  
-.button1:hover {
-    background-color: black;
-    color: #d6d0e0;
-}
-  
-.button2 {
-    padding: 0.5em;
-    padding-left: 2.3em;
-    padding-right: 2.3em;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    transition: .4s ease-in-out;
-    background-color: #252525;
-    color: #d6d0e0;
+    background-color: var(--black-color);
+    color: var(--fourbase-color);
 }
 
 .field-ligne{
@@ -824,4 +799,5 @@ h3 {
 .input-size{
     height: 100px;
 }
+
 /* formulaire contact end */
