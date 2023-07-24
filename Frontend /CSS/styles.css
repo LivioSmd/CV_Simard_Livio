@@ -52,11 +52,13 @@ h2 {
 }
 
 h3 {
-    color: #d6d0e0;
+    color: #7442a7;
     font-weight: 400;
     font-family: "Raleway", sans-serif;
-    font-size: 20px;
-    text-align: justify;
+    font-size: 30px;
+    text-align: -webkit-center;
+    color: #e9d3ff;
+    opacity: 0.7;
 }
 
 .textDescOpacity{
@@ -697,6 +699,7 @@ h3 {
 
 .div-nom-prenom{
     display: flex;
+    justify-content: space-between;
 }
 
 .contact-div{
@@ -731,7 +734,7 @@ h3 {
 .form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 22px;
     padding-left: 2em;
     padding-right: 2em;
     padding-bottom: 0.4em;
@@ -739,6 +742,7 @@ h3 {
     border-radius: 25px;
     transition: .4s ease-in-out;
     width: 60%;
+    height: 500px;
 }
   
 .form:hover {
@@ -780,7 +784,7 @@ h3 {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    margin-top: 2.5em;
+    margin-top: 0.5em;
 }
   
 .button1 {
@@ -813,4 +817,11 @@ h3 {
     color: #d6d0e0;
 }
 
+.field-ligne{
+    width: 44%;
+}
+
+.input-size{
+    height: 100px;
+}
 /* formulaire contact end */
