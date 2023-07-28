@@ -40,18 +40,27 @@ function createProjectButton(title, imagesSecondaires) {
   const button = document.createElement('button');
   button.textContent = title;
   button.classList.add('card-btn'); // Ajouter la classe pour le style du bouton
-  button.addEventListener('click', () => openModal(imagesSecondaires));
+  button.addEventListener('click', () => openModal(title, imagesSecondaires));
   return button;
 }
 
-// Fonction pour ouvrir la modale avec les images secondaires
-function openModal(imagesSecondaires) {
+ // Fonction pour ouvrir la modale avec les images secondaires
+function openModal(title, imagesSecondaires) {
   const modalContent = document.getElementById('modalContent');
   modalContent.innerHTML = '';
 
+  const divImageTexte = document.createElement('div');
+  divImageTexte.classList.add('div-img-text');
+  modalContent.appendChild(divImageTexte);
+
+  const textDescModale = document.createElement('div');
+  textDescModale.textContent = title;
+  textDescModale.classList.add('titre-desc-modale');
+  divImageTexte.appendChild(textDescModale);
+
   imagesSecondaires.forEach(image => {
     const imageElement = createImage(image, 'Image Secondaire');
-    modalContent.appendChild(imageElement);
+    divImageTexte.appendChild(imageElement);
   });
 
   const modal = document.getElementById('modal');

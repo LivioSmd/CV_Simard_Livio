@@ -547,13 +547,6 @@ h3 {
     align-items: center;
 }
 
-.all-cards-portfolio{
-    margin-top: 9%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 40px;
-}
-
 .architecte-background{
     background-image: url(../Images/page_web_dynamique_avec_JavaScript/profile.png) !important;
 }
@@ -805,9 +798,10 @@ h3 {
 /* modale projet start */
 /* Styles pour les projets */
 .projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    margin-top: 9%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
   }
   
   .project {
@@ -849,8 +843,11 @@ h3 {
   }
   
   .close {
-    color: #aaa;
-    float: right;
+    color: black;
+    position: absolute;
+    z-index: 1;
+    top: 73px;
+    right: 265px;
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
@@ -858,7 +855,7 @@ h3 {
   
   .close:hover,
   .close:focus {
-    color: black;
+    color: #aaa;
     text-decoration: none;
   }
   
@@ -876,3 +873,18 @@ h3 {
   }
   
 /* modale projet end */
+
+.div-img-text {
+    width: 80%;
+    height: 1200px;
+}
+
+.titre-desc-modale {
+    color: var(--black-color);
+    font-weight: 700;
+    font-size: 100Px;
+    font-family: "Raleway", sans-serif;
+    backdrop-filter: blur(30px);
+    text-align: center;
+    border-radius: 15px;
+}
