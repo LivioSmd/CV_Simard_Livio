@@ -7,6 +7,14 @@
             "./Images/Booki/2.png",
             "./Images/Booki/3.png",
             "./Images/Booki/4.png"
+        ],
+        "date" : "2022",
+        "mission": "Intégrer l'interface du site avec du code HTML et CSS pour l’entreprise Booki qui souhaitait développer un site Internet permettant aux usagers de trouver des hébergements et des activités dans la ville de leur choix.",
+        "epreuves": "Prémier projet en tant que développeur web",
+        "outils": [
+            "HTML",
+            "CSS",
+            "Git/Github"
         ]
     },
     {
@@ -17,6 +25,12 @@
             "./Images/page_web_dynamique_avec_JavaScript/2.png",
             "./Images/page_web_dynamique_avec_JavaScript/3.png",
             "./Images/page_web_dynamique_avec_JavaScript/4.png"
+        ],
+        "date" : "2023",
+        "mission": "Intégrer l'interface du site avec du code HTML et CSS pour l’entreprise Booki qui souhaitait développer un site Internet permettant aux usagers de trouver des hébergements et des activités dans la ville de leur choix.",
+        "epreuves": "Prémier projet en tant que développeur web",
+        "outils": [
+            "JavaScript"
         ]
     },
     {
@@ -26,7 +40,17 @@
             "./Images/Menu_maker_Qwenta/1.png",
             "./Images/Menu_maker_Qwenta/2.png",
             "./Images/Menu_maker_Qwenta/3.png"
-        ]   
+        ],
+        "date" : "2023",
+        "mission": "Intégrer l'interface du site avec du code HTML et CSS pour l’entreprise Booki qui souhaitait développer un site Internet permettant aux usagers de trouver des hébergements et des activités dans la ville de leur choix.",
+        "epreuves": "Prémier projet en tant que développeur web",
+        "outils": [
+            "Kanban",
+            "veille technologique",
+            "Spécifications techniques",
+            "solution technique",
+            "Méthode agile"
+        ]
     },
     {
         "titre": "Nina Carducci Photographie",
@@ -36,6 +60,14 @@
             "./Images/Nina-carducci/2.png",
             "./Images/Nina-carducci/3.png",
             "./Images/Nina-carducci/4.png"
+        ],
+        "date" : "2023",
+        "mission": "Intégrer l'interface du site avec du code HTML et CSS pour l’entreprise Booki qui souhaitait développer un site Internet permettant aux usagers de trouver des hébergements et des activités dans la ville de leur choix.",
+        "epreuves": "Prémier projet en tant que développeur web",
+        "outils": [
+            "SEO",
+            "Chrome DevTools",
+            "Cahier de recette"
         ]
     },
     {
@@ -45,7 +77,15 @@
             "./Images/Kasa-location/1.png",
             "./Images/Kasa-location/2.png",
             "./Images/Kasa-location/3.png",
-            "./Images/Kasa-location/4.png"        ]
+            "./Images/Kasa-location/4.png"        
+        ],
+        "date" : "2023",
+        "mission": "Intégrer l'interface du site avec du code HTML et CSS pour l’entreprise Booki qui souhaitait développer un site Internet permettant aux usagers de trouver des hébergements et des activités dans la ville de leur choix.",
+        "epreuves": "Prémier projet en tant que développeur web",
+        "outils": [
+            "React",
+            "CSS"
+        ]
     },
     {
         "titre": "Mon Vieux Groimoire",
@@ -55,6 +95,16 @@
             "./Images/Mon-vieux-grimoire/2.png",
             "./Images/Mon-vieux-grimoire/3.png",
             "./Images/Mon-vieux-grimoire/4.png"
+        ],
+        "date" : "2023",
+        "mission": "Intégrer l'interface du site avec du code HTML et CSS pour l’entreprise Booki qui souhaitait développer un site Internet permettant aux usagers de trouver des hébergements et des activités dans la ville de leur choix.",
+        "epreuves": "Prémier projet en tant que développeur web",
+        "outils": [
+            "Javascript",
+            "Node",
+            "Express",
+            "MongoDB",
+            "API"
         ]
     }
 ]
