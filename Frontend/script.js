@@ -27,27 +27,72 @@ boutonContact.addEventListener('click', () => {
 });
 
 
-// Récupérez toutes les cartes et le modal
-const cards = document.querySelectorAll(".card");
-const modal = document.getElementById("modal");
-const modalInfo = document.getElementById("modalInfo");
-const closeModal = document.getElementById("closeModal");
+// Fonction pour créer un élément image
+function createImage(src, alt) {
+  const imageElement = document.createElement('img');
+  imageElement.src = src;
+  imageElement.alt = alt;
+  return imageElement;
+}
 
-// Attachez un gestionnaire d'événement "click" à chaque carte
-cards.forEach((card) => {
-  card.addEventListener("click", () => {
-    // Récupérez le texte de la carte cliquée
-    const cardText = card.querySelector(".card-btn").textContent;
+// Fonction pour créer un bouton de projet avec événement de clic
+function createProjectButton(title, imagesSecondaires) {
+  const button = document.createElement('button');
+  button.textContent = title;
+  button.classList.add('card-btn'); // Ajouter la classe pour le style du bouton
+  button.addEventListener('click', () => openModal(imagesSecondaires));
+  return button;
+}
 
-    // Affichez le texte de la carte dans le modal
-    modalInfo.textContent = cardText;
+// Fonction pour ouvrir la modale avec les images secondaires
+function openModal(imagesSecondaires) {
+  const modalContent = document.getElementById('modalContent');
+  modalContent.innerHTML = '';
 
-    // Affichez le modal
-    modal.style.display = "block";
+  imagesSecondaires.forEach(image => {
+    const imageElement = createImage(image, 'Image Secondaire');
+    modalContent.appendChild(imageElement);
   });
-});
 
-// Attachez un gestionnaire d'événement "click" à l'icône de fermeture du modal pour le fermer
-closeModal.addEventListener("click", () => {
-  modal.style.display = "none";
-});
+  const modal = document.getElementById('modal');
+  modal.style.display = 'block';
+
+  const overlayBackground = document.getElementById('overlayBackground');
+  overlayBackground.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+// Fonction pour fermer la modale
+function closeModal() {
+  const modal = document.getElementById('modal');
+  modal.style.display = 'none';
+
+  const overlayBackground = document.getElementById('overlayBackground');
+  overlayBackground.classList.remove('active');
+  document.body.style.overflow = 'auto';
+}
+
+fetch('data.json')
+  .then(response => response.json())
+  .then(data => {
+    const projectsContainer = document.getElementById('projectsContainer');
+    const closeModalButton = document.getElementById('closeModal');
+    const overlayBackground = document.getElementById('overlayBackground');
+
+    data.forEach(project => {
+      const projectElement = document.createElement('div');
+      projectElement.classList.add('card');
+      projectElement.style.backgroundImage = `url(${project.imagePrincipale})`;
+
+      const divOverlay = document.createElement('div');
+      divOverlay.classList.add('overlay');
+
+      const button = createProjectButton(project.titre, project.imagesSecondaires);
+      projectElement.appendChild(divOverlay);
+      divOverlay.appendChild(button);
+      projectsContainer.appendChild(projectElement);
+    });
+
+    closeModalButton.addEventListener('click', closeModal);
+  })
+  .catch(error => console.error(error));
