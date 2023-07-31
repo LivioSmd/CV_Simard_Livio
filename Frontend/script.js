@@ -84,6 +84,7 @@ function openModal(outils, epreuves, mission, date, title, imagesSecondaires) {
 
   imagesSecondaires.forEach(image => {
     const imageElement = createImage(image, 'Image Secondaire');
+    imageElement.classList.add('img-secondaire');
     divImageTexte.appendChild(imageElement);
   });
 
