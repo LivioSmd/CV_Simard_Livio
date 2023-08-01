@@ -29,6 +29,7 @@ body {
     background-color: var(--black-color);
     width: 1440px;
     margin: 0;
+    overflow-x: hidden;
 }
 
 .LogoCv {
@@ -708,7 +709,7 @@ h3 {
     padding-top: 6%;
     height: 900px;
     background-image: url(../Images/comp.png);
-    background-size: cover;
+    background-size: contain;
     background-position: center center;
 }
 
@@ -763,7 +764,11 @@ h3 {
     border: none;
     outline: none;
     width: 100%;
-    color: #d3d3d3;
+    color: #122835;
+}
+
+::placeholder {
+    color : white
 }
   
 .form .btn-form-contact {
@@ -784,6 +789,7 @@ h3 {
     transition: .4s ease-in-out;
     background-color: var(--black-color);
     color: var(--fourbase-color);
+    Box-shadow: 4px 4px 11px blacK;
 }
 
 .field-ligne{
@@ -797,7 +803,7 @@ h3 {
 /* formulaire contact end */
 
 /* modale projet start */
-/* Styles pour les projets */
+
 .projects-container {
     margin-top: 9%;
     display: grid;
@@ -860,18 +866,17 @@ h3 {
     text-decoration: none;
   }
   
-/* Styles pour l'arrière-plan du modal */
+
 .overlay-background {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(128, 128, 128, 0.5); /* Définissez ici la couleur grise souhaitée */
-    z-index: 9999;
+    background-color: rgba(128, 128, 128, 0.5); 
     display: none;
-    pointer-events: none; /* Permet de ne pas bloquer les interactions avec les éléments en dessous */
-  }
+    pointer-events: none; 
+}
   
 /* modale projet end */
 
@@ -896,7 +901,6 @@ h3 {
     font-weight: 700;
     font-size: 30Px;
     font-family: "Raleway", sans-serif;
-    backdrop-filter: blur(30px);
     text-align: center;
     border-radius: 15px;
     background-color: var(--threebase-color);
